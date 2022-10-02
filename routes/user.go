@@ -121,7 +121,7 @@ func DeleteUser(c *gin.Context) {
 	}
 
 	config.DB.Delete(&user, id)
-	c.JSON(http.StatusNoContent, gin.H{
+	c.JSON(http.StatusOK, gin.H{
 		"message": "Delete Success",
 	})
 }
