@@ -149,7 +149,7 @@ func DeleteBook(c *gin.Context) {
 	data := config.DB.First(&book, "id = ?", id)
 
 	if data.Error != nil {
-		c.JSON(http.StatusNotFound, gin.H{
+		c.JSON(http.StatusOK, gin.H{
 			"message": "Data Not Found",
 			"data":    "Data Not Found",
 		})
